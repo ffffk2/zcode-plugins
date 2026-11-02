@@ -1,9 +1,9 @@
 {
-  "name": "dev-git-pr",
+  "name": "zcode-plugins",
   "plugins": [
     {
       "name": "git-pr",
-      "source": "./git-pr",
+      "source": "./plugins/git-pr",
       "version": "0.1.0",
       "description": "用斜杠命令提交代码并创建 Pull Request / Merge Request：/commit、/create-pr、/commit-pr。",
       "displayName": "Git 提交与 PR",

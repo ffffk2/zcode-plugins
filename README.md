@@ -1,19 +1,29 @@
-# zcode-git-pr
+# zcode-plugins
 
-一个 ZCode 插件：用斜杠命令完成「提交代码」和「创建 Pull Request / Merge Request」。
+个人 ZCode 插件集合。所有插件放在同一个仓库里统一维护、一起提交；每个插件独立版本、独立安装。
 
 ## 仓库结构
 
 ```
-dev-market/
-  marketplace.json      # 本地开发市场清单，供 ZCode 添加
-  git-pr/               # 插件源码
-    .zcode-plugin/plugin.json
-    commands/           # /commit、/create-pr、/commit-pr
-    README.md           # 插件详细说明
+marketplace.json        # 市场清单：列出仓库内所有插件
+plugins/
+  git-pr/               # 插件 1：提交代码与创建 PR
+  <future-plugin>/      # 以后新增的插件，与 git-pr 平级
+README.md
+CONTRIBUTING.md         # 新增插件的步骤与校验清单
 ```
 
-## 命令
+`marketplace.json` 里的 `plugins` 是数组，新增插件只需要：
+
+1. 在 `plugins/` 下创建插件目录；
+2. 在 `marketplace.json` 里追加一条 `source: "./plugins/<name>"`；
+3. 提交并推送。
+
+ZCode 刷新市场后即可看到新插件。具体步骤见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 当前插件
+
+### git-pr
 
 | 命令 | 作用 |
 | --- | --- |
@@ -23,10 +33,10 @@ dev-market/
 
 PR 创建会自动降级：`gh` → GitHub Token API → 预填网页链接；GitLab 使用 `glab` 或 MR 链接。提交前会检查凭据文件、真实密钥字面量和超大二进制文件；不使用 `--no-verify`，不执行 force push。
 
+详细说明见 [plugins/git-pr/README.md](plugins/git-pr/README.md)。
+
 ## 安装
 
-在 ZCode 中打开 **Plugin Marketplace → Add → Add Plugin Marketplace**，添加本仓库的 `dev-market` 目录（或克隆后的对应路径），然后安装 `git-pr` 插件。
+在 ZCode 中打开 **Plugin Marketplace → Add → Add Plugin Marketplace**，添加本仓库根目录（包含 `marketplace.json` 的目录），然后安装需要的插件。
 
-## 更多说明
-
-见 [dev-market/git-pr/README.md](dev-market/git-pr/README.md)。
+本地开发时直接添加工作区路径即可，修改插件后在市场里刷新/更新。

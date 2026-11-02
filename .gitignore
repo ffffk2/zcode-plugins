@@ -1,0 +1,10 @@
+# ZCode 本机状态，不纳入版本管理
+.zcode/
+
+# 历史遗留的插件源目录
+plugins/
+
+# 系统与编辑器文件
+.DS_Store
+Thumbs.db
+*.log

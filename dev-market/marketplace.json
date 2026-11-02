@@ -1,0 +1,19 @@
+{
+  "name": "dev-git-pr",
+  "plugins": [
+    {
+      "name": "git-pr",
+      "source": "./git-pr",
+      "version": "0.1.0",
+      "description": "用斜杠命令提交代码并创建 Pull Request / Merge Request：/commit、/create-pr、/commit-pr。",
+      "displayName": "Git 提交与 PR",
+      "displayName_i18n": {
+        "zh-CN": "Git 提交与 PR"
+      },
+      "description_i18n": {
+        "zh-CN": "用斜杠命令提交代码并创建 Pull Request / Merge Request。"
+      },
+      "category": "developer-tools"
+    }
+  ]
+}

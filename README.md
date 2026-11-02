@@ -40,3 +40,7 @@ PR 创建会自动降级：`gh` → GitHub Token API → 预填网页链接；Gi
 在 ZCode 中打开 **Plugin Marketplace → Add → Add Plugin Marketplace**，添加本仓库根目录（包含 `marketplace.json` 的目录），然后安装需要的插件。
 
 本地开发时直接添加工作区路径即可，修改插件后在市场里刷新/更新。
+
+## 反馈
+
+有问题或想新增插件，欢迎在 [Issues](https://github.com/ffffk2/zcode-plugins/issues) 中提出。
